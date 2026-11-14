@@ -2363,6 +2363,60 @@ a {
 
 
 
+/* =========================================================
+   BACKGROUND THEME OVERRIDES
+   (append at the very end of proline.css)
+   ========================================================= */
+
+:root {
+  --bg:       #e9dede;  /* 5% #722F37  + 95% white → warm parchment  */
+  --bg-soft:  #f2f5f5;  /* 6% #36454F  + 94% white → cool mist       */
+  --bg-muted: #e3e5e6;  /* 10% #36454F + 90% white → deeper mist     */
+}
+
+.proline-nav,
+.proline-nav__links {
+  background: color-mix(in srgb, var(--c-white) 55%, var(--bg));
+}
+
+.professional-centered-hero {
+  background:
+    radial-gradient(
+      ellipse 95% 70% at 50% -10%,
+      color-mix(in srgb, var(--c-accent) 12%, var(--c-white)) 0%,
+      transparent 65%
+    ),
+    var(--bg-soft);
+}
+
+.professional-company-timeline {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--c-muted) 3%, var(--c-white)) 0%,
+    var(--bg) 100%
+  );
+}
+
+.professional-company-timeline .pct-closing {
+  background: color-mix(in srgb, var(--c-white) 60%, var(--bg));
+}
+
+.portfolio .cta {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--c-accent) 7%, var(--c-white)) 0%,
+    var(--bg-soft) 100%
+  );
+}
+
+.pro-compact-footer {
+  background: linear-gradient(
+    180deg,
+    var(--bg) 0%,
+    color-mix(in srgb, var(--c-muted) 7%, var(--c-white)) 100%
+  );
+}
+
 
 
 
